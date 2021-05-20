@@ -12,7 +12,7 @@ jobs:
           name: Run tests
           environment:
             GO111MODULE: "on"
-          command: cd go test -v ./...
+          command: go test -v ./...
 
        
         

@@ -3,7 +3,7 @@ version: 2.1
 
 
 orbs:
-  win: circleci/windows@2.2.0
+  win: circleci/windows@2.4.0
 
 jobs:
   linux_test:
@@ -23,9 +23,14 @@ jobs:
       shell: powershell.exe
     steps:
       - checkout
-      - run: systeminfo
-      - run: go version
-      - run: go test -v ./...
+      - run: 
+          name: Check GO version
+          command: go version
+      - run:
+          name: Run tests
+          environment:
+            GO111MODULE: "on"
+          command: go test -v ./...
 
 workflows:
   version: 2

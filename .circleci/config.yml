@@ -24,6 +24,7 @@ jobs:
     steps:
       - checkout
       - run: systeminfo
+      - run: go version
       - run:
           name: "Check docker"
           shell: powershell.exe

@@ -26,11 +26,11 @@ jobs:
       - run: 
           name: Check GO version
           command: go version
-      - run:
-          name: Run tests
-          environment:
-            GO111MODULE: "on"
-          command: go test -v ./...
+ #     - run:
+ #         name: Run tests
+ #         environment:
+ #           GO111MODULE: "on"
+ #         command: go test -v ./...
 
 workflows:
   version: 2
